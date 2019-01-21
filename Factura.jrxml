@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Factura" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a7237016-cc85-451b-9f3a-7e2297e7af9b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="144"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="0" width="554" height="37" uuid="639868c9-8ac8-463a-8926-084d2438c5ca"/>
+				<textElement textAlignment="Center">
+					<font size="26"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Distribuidora El Templo Del Aseo]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="116" splitType="Stretch">
+			<textField>
+				<reportElement x="231" y="0" width="100" height="20" uuid="0030acbc-d57d-4e35-b0ce-6a0b28cd8133"/>
+				<textFieldExpression><![CDATA[Jhon Jairo Narvaez]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="15" width="220" height="20" uuid="6171ce97-4b36-4458-870a-5fe652638f5b"/>
+				<textFieldExpression><![CDATA[Nit.  16.932.293 - 9    Regimen Simplificado]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="35" width="157" height="20" uuid="029fa460-4c21-47a1-8731-7db3283a9116"/>
+				<textFieldExpression><![CDATA[FABRICAMOS Y DISTRIBUIMOS]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="98" y="55" width="397" height="20" uuid="964ed2e2-89d0-4503-9dce-ee53a9b1676d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[TRAPEROS  *  ESCOBAS  *  CEPILLOS  *  AMBIENTADORES  * ETC]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="75" width="278" height="20" uuid="6f2e649b-085c-44e4-867d-73483aba49d3"/>
+				<textFieldExpression><![CDATA[Venta Al Por Mayor Y Detal    *    Servicio A Domicilio]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="98" height="95" uuid="1f8815d7-8bfc-4671-94bc-617cd36f9d66"/>
+				<imageExpression><![CDATA["C:\\Users\\Dell\\Downloads\\LOGO.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="454" y="95" width="100" height="20" uuid="eb0417dd-e761-4350-850b-157b95e908b5"/>
+				<textFieldExpression><![CDATA[Fecha:]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="5ef5550c-7b15-410b-b12a-22f00a2c648f"/>
+				<textFieldExpression><![CDATA[Factura De Venta:]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="553" height="61" uuid="432e81a9-6f62-4bef-a98a-420993425d6d"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="0.25" lineStyle="Double" lineColor="#666666"/>
+					<topPen lineWidth="0.25" lineStyle="Double" lineColor="#666666"/>
+					<leftPen lineWidth="0.25" lineStyle="Double" lineColor="#666666"/>
+					<bottomPen lineWidth="0.25" lineStyle="Double" lineColor="#666666"/>
+					<rightPen lineWidth="0.25" lineStyle="Double" lineColor="#666666"/>
+				</box>
+				<textField>
+					<reportElement x="1" y="0" width="61" height="20" uuid="5740257b-b859-42b1-bc4a-928edc1050d8"/>
+					<textFieldExpression><![CDATA[Cliente:]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="62" y="0" width="254" height="20" uuid="b9811b76-8b76-4993-b543-bc04ca0ac554"/>
+					<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="1" y="20" width="61" height="20" uuid="1b04f2a6-dbde-423e-9422-c1033d68ad03"/>
+					<textFieldExpression><![CDATA[Direccion:]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="62" y="20" width="254" height="20" uuid="4e094474-c6b4-4014-9620-b13075569f11"/>
+					<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="1" y="40" width="61" height="20" uuid="3ca4df60-d93b-49e4-84ee-7f803cfb9b3e"/>
+					<textFieldExpression><![CDATA[Vendedor:]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="62" y="40" width="254" height="20" uuid="fd0caf7e-88a2-432f-bcc3-86268402b039"/>
+					<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="316" y="0" width="100" height="20" uuid="acb723d1-1fef-4395-8797-c245c1208d66"/>
+					<textFieldExpression><![CDATA[Telefono:]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="316" y="20" width="100" height="20" uuid="c35910f2-a281-4cbe-9507-f3eb796f5906"/>
+					<textFieldExpression><![CDATA[Barrio:]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="316" y="41" width="100" height="20" uuid="5f373b81-eb73-4fd4-bb51-4646e0f37036"/>
+					<textFieldExpression><![CDATA[Forma De Pago:]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="416" y="0" width="137" height="20" uuid="b500cf4e-76a2-4510-b5c7-9830072d6b1c"/>
+					<textFieldExpression><![CDATA[]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="416" y="20" width="137" height="20" uuid="566230f0-e820-472d-b195-97f60ebb34ce"/>
+					<textFieldExpression><![CDATA[]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="416" y="40" width="137" height="20" uuid="a4e27334-3010-4a87-8a20-3e02edf2428a"/>
+					<textFieldExpression><![CDATA[]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
