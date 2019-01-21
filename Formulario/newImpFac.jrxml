@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nunfac" class="java.lang.String"/>
+	<parameter name="subtotal" class="java.lang.String"/>
+	<parameter name="igv" class="java.lang.String"/>
+	<parameter name="total" class="java.lang.String"/>
+	<parameter name="nomape" class="java.lang.String"/>
+	<parameter name="direccion" class="java.lang.String"/>
+	<parameter name="codigo" class="java.lang.String"/>
+	<parameter name="ruc" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="dni" class="java.lang.String"/>
+	<field name="codigo" class="java.lang.String"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<field name="cantidad" class="java.lang.String"/>
+	<field name="precio" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="13" width="172" height="24" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Algerian" size="40" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[FACTURA DE VENTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="123" y="0" width="311" height="53" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Andalus" size="30" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[FACTURA DE VENTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="13" width="260" height="20"/>
+				<textElement>
+					<font fontName="Algerian" size="14"/>
+				</textElement>
+				<text><![CDATA[Centro Veterinario San Miguel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[RUC 75072636-5]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="434" y="20" width="100" height="20" forecolor="#FF0033"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["Nº "+$P{nunfac}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="139" splitType="Stretch">
+			<rectangle>
+				<reportElement x="41" y="38" width="459" height="86"/>
+				<graphicElement>
+					<pen lineColor="#3366FF"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="134" y="38" width="120" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{nomape}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="73" y="38" width="61" height="20" forecolor="#3333FF"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Señor(a):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="134" y="68" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{ruc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="73" y="68" width="61" height="20" forecolor="#3333FF"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RUC:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="134" y="93" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{direccion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="73" y="93" width="61" height="20" forecolor="#3333FF"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Direccion:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="38" width="100" height="20" forecolor="#3333FF"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[         Cod. Cliente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="68" width="100" height="20" forecolor="#3333FF"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[                       DNI:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="93" width="100" height="20" forecolor="#3333FF"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Emision:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="38" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="68" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{dni}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="93" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="41" y="0" width="459" height="20" backcolor="#3399FF"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="42" y="0" width="66" height="20" backcolor="#6699FF"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[COD. PROD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="108" y="0" width="134" height="20" backcolor="#6699FF"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[DESCRIPCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="0" width="100" height="20" backcolor="#6699FF"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[PRECIO UNITARIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="0" width="59" height="20" backcolor="#6699FF"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[CANTIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="0" width="100" height="20" backcolor="#6699FF"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="41" y="0" width="67" height="20"/>
+				<box>
+					<pen lineColor="#0099FF"/>
+					<topPen lineColor="#0099FF"/>
+					<leftPen lineWidth="0.25" lineColor="#0099FF"/>
+					<bottomPen lineWidth="0.25" lineColor="#0099FF"/>
+					<rightPen lineColor="#0099FF"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="108" y="0" width="134" height="20"/>
+				<box>
+					<pen lineColor="#0099FF"/>
+					<topPen lineColor="#0099FF"/>
+					<leftPen lineWidth="0.25" lineColor="#0099FF"/>
+					<bottomPen lineWidth="0.25" lineColor="#0099FF"/>
+					<rightPen lineColor="#0099FF"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="0" width="100" height="20"/>
+				<box>
+					<pen lineColor="#0099FF"/>
+					<topPen lineColor="#0099FF"/>
+					<leftPen lineWidth="0.25" lineColor="#0099FF"/>
+					<bottomPen lineWidth="0.25" lineColor="#0099FF"/>
+					<rightPen lineColor="#0099FF"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="0" width="59" height="20"/>
+				<box>
+					<pen lineColor="#0099FF"/>
+					<topPen lineColor="#0099FF"/>
+					<leftPen lineWidth="0.25" lineColor="#0099FF"/>
+					<bottomPen lineWidth="0.25" lineColor="#0099FF"/>
+					<rightPen lineColor="#0099FF"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20"/>
+				<box>
+					<pen lineColor="#0099FF"/>
+					<topPen lineColor="#0099FF"/>
+					<leftPen lineWidth="0.25" lineColor="#0099FF"/>
+					<bottomPen lineWidth="0.25" lineColor="#0099FF"/>
+					<rightPen lineWidth="0.25" lineColor="#0099FF"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="112" splitType="Stretch">
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{subtotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="20" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{igv}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="40" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="301" y="0" width="100" height="20" forecolor="#3333FF"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Subtotal:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="20" width="100" height="20" forecolor="#3333FF"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[IGV: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="40" width="100" height="20" forecolor="#3333FF"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total a Pagar :]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

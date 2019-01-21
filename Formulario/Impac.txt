@@ -1,0 +1,20 @@
+                        FACTURA DE VENTA
+
+              Centro Veterinario San Miguel
+                                     Nit 75072636-5
+         
+                                     FACTURA DE
+        
+                                       Nº 0000000
+         
+        Señor(a): aaaaaa       Cod. Cliente:
+
+        RUC: eeeeeee               DNI: eeeeeeee
+
+        Direccion:                 Fecha de Emis
+
+      COD. P DESCRIPCION  PRECIO UNICANTI   TOTAL
+      null  null          null      null  null
+                                          Subtotal:
+                                          IGV: 14114
+                                          Total a Pa
